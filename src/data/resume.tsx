@@ -1,0 +1,404 @@
+import { Icons } from "@/components/icons";
+import { HomeIcon, NotebookIcon } from "lucide-react";
+
+export const DATA = {
+  name: "Anurag Parashar",
+  initials: "AP",
+  url: "https://anuragparashar.netlify.app/",
+  location: "Bengaluru, India",
+  locationLink: "https://www.google.com/maps/place/bengaluru",
+  description:
+    "Aspiring software developer. Proficient in web development. Passionate about AIML, Cybersecurity, Open Source and Design.",
+  summary:
+    "Seeking a role in software and web development to leverage expertise in secure system design, full-stack development, and problem-solving. Interested in contributing to projects at the intersection of software engineering, AI/ML, and user-centric solutions, driving innovations in technology and digital security.",
+  avatarUrl: "/me.png",
+  skills: {
+    Frontend: ["React", "Next.js", "Tailwind CSS", "Typescript"],
+    Backend: ["Node.js", "Python", "Java", "C/C++"],
+    Database: ["Postgres", "MongoDB"],
+    Tools: ["Docker", "Tableu"],
+  },
+  navbar: [
+    { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "https://blog.anuragparashar.tech/", icon: NotebookIcon, label: "Blog" },
+  ],
+  contact: {
+    email: "anuragp5025@gmail.com",
+    tel: "+917870645478",
+    social: {
+      GitHub: {
+        name: "GitHub",
+        url: "https://github.com/anuragparashar26",
+        icon: Icons.github,
+
+        navbar: true,
+      },
+      LinkedIn: {
+        name: "LinkedIn",
+        url: "https://linkedin.com/in/anuragparashar26",
+        icon: Icons.linkedin,
+
+        navbar: true,
+      },
+      X: {
+        name: "X",
+        url: "https://x.com/zeroShotDev",
+        icon: Icons.x,
+
+        navbar: true,
+      },
+      LeetCode: {
+        name: "LeetCode",
+        url: "https://leetcode.com/anuragparashar",
+        icon: Icons.leetcode,
+        navbar: true,
+      },
+      Peerlist: {
+        name: "Peerlist",
+        url: "https://peerlist.io/anuragparashar",
+        icon: Icons.peerlist,
+        navbar: true,
+      },
+      email: {
+        name: "Send Email",
+        url: "#",
+        icon: Icons.email,
+
+        navbar: false,
+      },
+    },
+  },
+
+  // work: [  
+  //   {
+  //     company: "Mitre Media",
+  //     href: "https://mitremedia.com/",
+  //     badges: [],
+  //     location: "Toronto, ON",
+  //     title: "Software Engineer",
+  //     logoUrl: "/mitremedia.png",
+  //     start: "May 2017",
+  //     end: "August 2017",
+  //     description:
+  //       "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
+  //   },
+  // ],
+    
+  education: [
+    {
+      school: "JSSATE, Bengaluru",
+      href: "https://jssateb.ac.in/",
+      degree: "Bachelor of Engineering",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4rqjvB0pbMwXVAg6qaFy67iz2xoO3N_qT7g&s",
+      start: "2022",
+      end: "2026",
+    }
+  ],
+  projects: [
+    {
+      title: "Tarea - Organize Smarter",
+      href: "https://anuragparashar26.github.io/tarea/",
+      dates: "August 2025 - Present",
+      active: true,
+      description:
+        "Coming Soon!",
+      technologies: [
+        // "Next.js",
+        // "Typescript",
+        // "Node.js",
+        // "TailwindCSS",
+        // "MongoDB",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://anuragparashar26.github.io/tarea/",
+          icon: <Icons.globe className="size-3" />, 
+        },
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/tarea",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/tarea.png",
+      video: "",
+      category: "Web Apps",
+    },
+    {
+      title: "Blog Site",
+      href: "https://blog.anuragparashar.tech/",
+      dates: "August 2025",
+      active: true,
+      description:
+        "A modern, responsive personal blog built with Next.js, TypeScript, and Tailwind CSS. Features a clean design with email subscription (Sendgrid) and cloud image uploads (Cloudinary) functionality for blog posts.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "Node.js",
+        "TailwindCSS",
+        "MongoDB",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://blog.anuragparashar.tech/",
+          icon: <Icons.globe className="size-3" />, 
+        },
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/personal-blog/",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/blog.png",
+      video: "",
+      category: "Web Apps",
+    },
+    {
+      title: "CyberTron",
+      href: "https://cybertron-uvmm.onrender.com/",
+      dates: "July 2025-August 2025",
+      active: true,
+      description:
+        "A gamified cybersecurity learning platform with interactive terminal commands, VirusTotal integration, and simulated security tools. Note: Not yet optimized for mobile devices.",
+      technologies: [
+        "React.js",
+        "Node.js",
+        "TailwindCSS",
+        "Virus Total API",
+        "Supabase",
+        "Render",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://cybertron-uvmm.onrender.com/",
+          icon: <Icons.globe className="size-3" />, 
+        },
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/CyberTron",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/cyber.png",
+      video: "",
+      category: "Web Apps",
+    },
+    {
+      title: "Lendwise",
+      href: "https://loan-web-app-frontend-ew3f.onrender.com/",
+      dates: "January 2025 - July 2025",
+      active: true,
+      description:
+        "A multilingual loan advisor app that helps users explore, calculate, and apply for loans, featuring an AI-powered chatbot for instant loan advice and financial tips.",
+      technologies: [
+        "React.js",
+        "Node.js",
+        "Gemini API",
+        "Express",
+        "Render",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://loan-web-app-frontend-ew3f.onrender.com/",
+          icon: <Icons.globe className="size-3" />, 
+        },
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/loan-web-app",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/loan.png",
+      video: "",
+      category: "Web Apps",
+    },
+    {
+      title: "Lost and Found Platform",
+      href: "https://lostandfoundmini.netlify.app/",
+      dates: "August 2024 - May 2025",
+      active: true,
+      description:
+        "A seamless digital platform that reconnects people with lost belongings through intuitive matching, real-time updates, and user-friendly tools.",
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Supabase",
+        "Netlify",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://lostandfoundmini.netlify.app/",
+          icon: <Icons.globe className="size-3" />, 
+        },
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/LostandFound",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/lostfound.png",
+      video:
+        "",
+      category: "Web Apps",
+    },
+    {
+      title: "txt2chat",
+      href: "https://github.com/anuragparashar26/txt2chat",
+      dates: "March 2025 - May 2025",
+      active: true,
+      description:
+        "A react app to convert WhatsApp .txt exports into an interactive, chat-style viewer with media support and full-text search.",
+      technologies: [
+        "React.js",
+        "CSS",
+        "JavaScript",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/txt2chat",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/txt2chat.png",
+      video:
+        "",
+      category: "Web Apps",
+    },
+    {
+      title: "Focus Flick",
+      href: "https://github.com/anuragparashar26/focus-flick",
+      dates: "July 2025",
+      active: true,
+      description:
+        "A chrome extension that automatically pauses YouTube videos when you switch tabs or windows, and resumes playback when you return.",
+      technologies: [
+        "JavaScript",
+        "Chrome Extension",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/focus-flick",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/focus.png",
+      video:
+        "",
+      category: "Developer Tools",
+    },
+    {
+      title: "Github Repo Tree Generator",
+      href: "https://github-repo-tree-generator.vercel.app/",
+      dates: "June 2025",
+      active: true,
+      description:
+        "An app that generates a markdown-style directory tree of any public or private GitHub repository.",
+      technologies: [
+        "React.js",
+        "Typescript",
+        "Tailwind CSS",
+        "Vercel",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/github-repo-tree-generator",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/repo.png",
+      video:
+        "",
+      category: "Developer Tools",
+    },
+    {
+      title: "WhatsBlur",
+      href: "https://github.com/anuragparashar26/whatsblur-chrome-extension",
+      dates: "May 2025",
+      active: true,
+      description:
+        "A Chrome extension that blurs the message previews on WhatsApp Web.",
+      technologies: [
+        "JavaScript",
+        "Chrome Extension",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/whatsblur-chrome-extension",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/whatsblur.png",
+      video:
+        "",
+      category: "Developer Tools",
+    },
+    {
+      title: "Hostel Management System",
+      href: "https://github.com/anuragparashar26/java-swing-jdbc",
+      dates: "March - 2025",
+      active: true,
+      description:
+        "A Java-based Hostel Management System with a MongoDB backend, offering secure login, student record management, and a user-friendly GUI for efficient categorization and seamless data handling.",
+      technologies: [
+        "Java",
+        "Swing",
+        "MongoDB",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/java-jdbc-swing",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/swing.png",
+      video:
+        "",
+      category: "Desktop Apps",
+    },
+  ],
+  certifications: [
+    {
+      title: "Google Cybersecurity Specialization",
+      issuer: "Google and Coursera",
+      date: "October 2024",
+      description: "Credential ID: RJO9Y8VL6CWF",
+      link: "https://coursera.org/share/906663465d385b6dad931ae9c3115ea4",
+      image: "/google.png",
+    },
+   {
+      title: "AI Essentials",
+      issuer: "Google and Coursera",
+      date: "June 2024",
+      description: "Credential ID: QGY95GSDNG2C",
+      link: "https://coursera.org/share/1b36fa8c44299b051803be4f67673ead",
+      image: "/google.png",
+    },
+    {
+      title: "Digital Skills: User Experience",
+      issuer: "Accenture and Future Learn",
+      date: "February 2024",
+      description: "Credential ID: 0wzqu2l",
+      link: "https://www.futurelearn.com/certificates/0wzqu2l",
+      image: "/acc.png",
+    },
+    {
+      title: "Elements of AI",
+      issuer: "University of Helsinki",
+      date: "August 2025",
+      description: "Credential ID: eub730k69nl",
+      link: "https://certificates.mooc.fi/validate/eub730k69nl",
+      image: "/helsinki.jpg",
+    },
+  ],
+} as const;
