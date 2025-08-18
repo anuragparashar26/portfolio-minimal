@@ -22,7 +22,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
+                text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
@@ -51,15 +51,17 @@ export default function Page() {
         </BlurFade>
       </section>
       <div className="mt-4 flex justify-left">
+        <BlurFade delay={BLUR_FADE_DELAY * 5}>
           <a
             href="https://drive.google.com/file/d/1-4luJ3zWE7XZgLHZIYHwK_nxqAQHMyoA/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded bg-primary px-6 py-2 text-white font-semibold shadow hover:bg-primary/90 transition-colors"
+            className="inline-block rounded bg-primary text-primary-foreground px-6 py-2 font-semibold shadow hover:bg-primary/90 transition-colors"
           >
             Resume 
           </a>
-        </div>
+        </BlurFade>
+      </div>
       {/* <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -113,18 +115,11 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-col gap-4">
-            {Object.entries(DATA.skills).map(([category, skills], catIdx) => (
-              <div key={category}>
-                <div className="font-semibold mb-1 text-muted-foreground">{category}</div>
-                <div className="flex flex-wrap gap-1">
-                  {skills.map((skill, id) => (
-                    <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + (catIdx * 10 + id) * 0.05}>
-                      <Badge key={skill}>{skill}</Badge>
-                    </BlurFade>
-                  ))}
-                </div>
-              </div>
+          <div className="flex flex-wrap gap-1">
+            {Object.values(DATA.skills).flat().map((skill, id) => (
+              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                <Badge key={skill}>{skill}</Badge>
+              </BlurFade>
             ))}
           </div>
         </div>
@@ -141,9 +136,7 @@ export default function Page() {
                   Check out my work
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
+                  Here are some projects I've worked on.
                 </p>
               </div>
             </div>
@@ -191,7 +184,7 @@ export default function Page() {
                   My Certifications
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Here are some of the certifications I have earned in my career and learning journey.
+                  Here are some of the certifications I have earned.
                 </p>
               </div>
             </div>
@@ -212,7 +205,14 @@ export default function Page() {
                       <div className="text-sm text-muted-foreground">{cert.issuer} &middot; {cert.date}</div>
                       <div className="text-xs text-muted-foreground mb-1">{cert.description}</div>
                       {cert.link && (
-                        <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-primary underline text-xs">View Credential</a>
+                        <a
+                          href={cert.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block rounded bg-primary text-primary-foreground px-3 py-1 font-semibold shadow hover:bg-primary/90 transition-colors text-xs"
+                        >
+                          View Credential
+                        </a>
                       )}
                     </div>
                   </li>
@@ -233,15 +233,14 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+                Drop a DM {" "}
                 <Link
                   href={DATA.contact.social.X.url}
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on twitter
+                  on X
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                and I&apos;ll respond whenever I can.
               </p>
             </div>
           </BlurFade>

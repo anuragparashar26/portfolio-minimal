@@ -4,7 +4,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Anurag Parashar",
   initials: "AP",
-  url: "https://anuragparashar.netlify.app/",
+  url: "https://anuragparashar.tech/",
   location: "Bengaluru, India",
   locationLink: "https://www.google.com/maps/place/bengaluru",
   description:
@@ -30,40 +30,36 @@ export const DATA = {
         name: "GitHub",
         url: "https://github.com/anuragparashar26",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://linkedin.com/in/anuragparashar26",
         icon: Icons.linkedin,
-
         navbar: true,
       },
       X: {
         name: "X",
         url: "https://x.com/zeroShotDev",
         icon: Icons.x,
-
         navbar: true,
       },
       LeetCode: {
         name: "LeetCode",
         url: "https://leetcode.com/anuragparashar",
         icon: Icons.leetcode,
-        navbar: true,
+        navbar: false, // removed from navbar
       },
       Peerlist: {
         name: "Peerlist",
         url: "https://peerlist.io/anuragparashar",
         icon: Icons.peerlist,
-        navbar: true,
+        navbar: false, // removed from navbar
       },
       email: {
         name: "Send Email",
         url: "#",
         icon: Icons.email,
-
         navbar: false,
       },
     },
@@ -88,7 +84,7 @@ export const DATA = {
     {
       school: "JSSATE, Bengaluru",
       href: "https://jssateb.ac.in/",
-      degree: "Bachelor of Engineering",
+      degree: "Bachelor of Engineering in Information Science and Engineering",
       logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4rqjvB0pbMwXVAg6qaFy67iz2xoO3N_qT7g&s",
       start: "2022",
       end: "2026",
@@ -402,3 +398,4 @@ export const DATA = {
     },
   ],
 } as const;
+
