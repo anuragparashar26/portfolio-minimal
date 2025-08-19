@@ -16,7 +16,7 @@ export const DATA = {
     Frontend: ["React", "Next.js", "Tailwind CSS", "Typescript"],
     Backend: ["Node.js", "Python", "Java", "C/C++"],
     Database: ["Postgres", "MongoDB"],
-    Tools: ["Docker", "Tableu"],
+    Tools: ["Docker", "Tableau"],
   },
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -48,13 +48,13 @@ export const DATA = {
         name: "LeetCode",
         url: "https://leetcode.com/anuragparashar",
         icon: Icons.leetcode,
-        navbar: false, // removed from navbar
+        navbar: false,
       },
       Peerlist: {
         name: "Peerlist",
         url: "https://peerlist.io/anuragparashar",
         icon: Icons.peerlist,
-        navbar: false, // removed from navbar
+        navbar: false,
       },
       email: {
         name: "Send Email",
@@ -304,6 +304,11 @@ export const DATA = {
         "Vercel",
       ],
       links: [
+        {
+          type: "Website",
+          href: "https://github-repo-tree-generator.vercel.app/",
+          icon: <Icons.globe className="size-3" />, 
+        },
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/github-repo-tree-generator",

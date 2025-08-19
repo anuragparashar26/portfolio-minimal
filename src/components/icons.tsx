@@ -1,25 +1,10 @@
-  // ...existing code...
-import { GlobeIcon, MailIcon } from "lucide-react";
+import { GlobeIcon, MailIcon, Code2Icon, Contact2Icon } from "lucide-react";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
-  leetcode: (props: IconProps) => (
-    <svg
-      width="32px"
-      height="32px"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <title>Code</title>
-      <path d="M8.7 16.7a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L6.42 12l2.3 2.3a1 1 0 0 1 0 1.4zm6.6 0a1 1 0 0 0 1.4 0l4-4a1 1 0 0 0 0-1.4l-4-4a1 1 0 1 0-1.4 1.4l2.3 2.3-2.3 2.3a1 1 0 0 0 0 1.4z" />
-    </svg>
-  ),
-  peerlist: (props: Partial<React.ImgHTMLAttributes<HTMLImageElement>>) => (
-    <img src="/peerlist.png" alt="Peerlist" width={24} height={24} style={{ display: 'inline-block', verticalAlign: 'middle' }} {...props} />
-  ),
+  leetcode: (props: IconProps) => <Code2Icon {...props} />,
+  peerlist: (props: IconProps) => <Contact2Icon {...props} />,
   globe: (props: IconProps) => <GlobeIcon {...props} />,
   email: (props: IconProps) => <MailIcon {...props} />,
   linkedin: (props: IconProps) => (
