@@ -102,7 +102,6 @@ export default function Navbar() {
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-12"
                   )}
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   <ArrowLeftRightIcon className="size-4" />

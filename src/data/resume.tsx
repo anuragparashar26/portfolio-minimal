@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon, Languages, NotebookIcon } from "lucide-react";
 
 export const DATA = {
   name: "Anurag Parashar",
@@ -13,10 +13,11 @@ export const DATA = {
     "Seeking a role in software and web development to leverage expertise in secure system design, full-stack development, and problem-solving. Interested in contributing to projects at the intersection of software engineering, AI/ML, and user-centric solutions, driving innovations in technology and digital security.",
   avatarUrl: "/me.png",
   skills: {
-    Frontend: ["React", "Next.js", "Tailwind CSS", "Typescript"],
-    Backend: ["Node.js", "Python", "Java", "C/C++"],
-    Database: ["Postgres", "MongoDB"],
-    Tools: ["Docker", "Tableau"],
+    Frontend: ["ReactJs", "NextJs","Tailwind", "JavaScript", "Typescript"],
+    Backend: ["NodeJs", "ExpressJs"],
+    Languages: ["C", "C++", "Java", "Python"],
+    Database: ["PostgreSQL", "MongoDB", "SQL"],
+    Tools: ["Figma", "Canva", , "Tableau", "Git", "Github", "Jenkins", "Jupyter", "Scikit-learn", "Docker", "Linux", "Vercel", "Render", "Supabase"],
   },
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
