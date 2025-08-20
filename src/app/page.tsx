@@ -2,7 +2,6 @@ export const metadata = {
   title: "Anurag's Minimal Portfolio",
   description: "A minimal portfolio by Anurag Parashar.",
 };
-
 // import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -13,12 +12,27 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { BlogSection, BlogPost } from "@/components/blog-section";
 
 const BLUR_FADE_DELAY = 0.04;
 
-export default function Page() {
+export default async function Page() {
+  // Fetch blog posts server-side
+  let posts: BlogPost[] = [];
+  let error: string | null = null;
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+    const res = await fetch(`${baseUrl}/api/blog-titles`, {
+      cache: 'no-store',
+    });
+    const data = await res.json();
+    posts = data.posts || [];
+    error = data.error || null;
+  } catch (e: any) {
+    error = e.message || 'Failed to fetch blog posts';
+  }
   return (
-  <main className="flex flex-col min-h-[100dvh] space-y-6">
+    <main className="flex flex-col min-h-[100dvh] space-y-6">
     <section id="hero">
       <div className="mx-auto w-full max-w-2xl space-y-6">
         <div className="gap-2 flex justify-between">
@@ -152,7 +166,7 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
+                  Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Check out my work
@@ -246,6 +260,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+  <BlogSection posts={posts} error={error} />
       <section id="contact">
         <div className="grid items-center justify-center gap-2 px-4 text-center md:px-6 w-full py-6">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
@@ -264,7 +279,12 @@ export default function Page() {
                 >
                   on X
                 </Link>{" "}
-                and I&apos;ll respond whenever I can.
+                or send an <a
+                  href={`mailto:${DATA.contact.email}`}
+                  className="text-blue-500 hover:underline"
+                >
+                  email
+                </a>{" "}and I&apos;ll respond whenever I can.
               </p>
             </div>
           </BlurFade>
