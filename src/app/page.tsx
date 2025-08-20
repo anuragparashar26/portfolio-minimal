@@ -268,7 +268,7 @@ export default async function Page() {
       </section>
   <BlogSection posts={posts} error={error} />
       <section id="contact">
-        <div className="grid items-center justify-center gap-2 px-4 text-center md:px-6 w-full py-6">
+        <div className="grid items-center justify-center gap-2 px-4 text-center md:px-6 w-full py-6 mb-6">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">

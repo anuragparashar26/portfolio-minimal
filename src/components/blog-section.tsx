@@ -8,9 +8,9 @@ export type BlogPost = { title: string; url: string };
 
 export function BlogSection({ posts, error }: { posts: BlogPost[]; error?: string | null }) {
 	return (
-		<section id="blog" className="w-full py-6">
+		<section id="blog" className="w-full py-2">
 			<BlurFade delay={BLUR_FADE_DELAY * 15.5}>
-				<div className="space-y-6 p-6">
+				<div className="space-y-6 p-2">
 					<div className="flex flex-col items-center justify-center space-y-4 text-center">
 						<div className="space-y-2">
 							<div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
