@@ -1,3 +1,5 @@
+import { headers } from "next/headers";
+
 export const metadata = {
   title: "Anurag's Minimal Portfolio",
   description: "A minimal portfolio by Anurag Parashar.",
@@ -21,8 +23,12 @@ export default async function Page() {
   let posts: BlogPost[] = [];
   let error: string | null = null;
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-    const res = await fetch(`${baseUrl}/api/blog-titles`, {
+    const h = headers();
+    const host = h.get("host");
+    const protocol = h.get("x-forwarded-proto") || "http";
+    const absUrl = `${protocol}://${host}/api/blog-titles`;
+
+    const res = await fetch(absUrl, {
       cache: 'no-store',
     });
     const data = await res.json();
