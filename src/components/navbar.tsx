@@ -91,7 +91,7 @@ export default function Navbar() {
             </DockIcon>
           ))}
         <Separator orientation="vertical" className="h-full py-2" />
-        {/* Mobile: codebase switch icon beside theme toggle */}
+  {/* Mobile: switch icon beside theme toggle */}
         <div className="flex items-center">
           <DockIcon className="block md:hidden">
             <Tooltip>
@@ -107,9 +107,6 @@ export default function Navbar() {
                   <ArrowLeftRightIcon className="size-4" />
                 </Link>
               </TooltipTrigger>
-              <TooltipContent>
-                <p>Codebase</p>
-              </TooltipContent>
             </Tooltip>
           </DockIcon>
           <DockIcon>
