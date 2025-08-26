@@ -184,6 +184,36 @@ export const DATA = {
       category: "Web Apps",
     },
     {
+      title: "ShowDevKit - A Portfolio for Developers",
+      href: "https://showdevkit.netlify.app/",
+      dates: "January 2025",
+      active: true,
+      description:
+        "A modern, customizable personal portfolio website template to showcase your projects, skills, and experience. Built with clean HTML, CSS, and JavaScript.",
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "AOS",
+        "Formspree",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://showdevkit.netlify.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/showdevkit/",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/showdevkit.png",
+      video: "",
+      category: "Web Apps",
+    },
+    {
       title: "Lendwise",
       href: "https://loan-web-app-frontend-ew3f.onrender.com/",
       dates: "January 2025 - July 2025",
