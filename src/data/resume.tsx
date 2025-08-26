@@ -123,7 +123,7 @@ export const DATA = {
       category: "Web Apps",
     },
     {
-      title: "Blog Site",
+      title: "DevJournal - Blog for Everyone",
       href: "https://blog.anuragparashar.tech/",
       dates: "August 2025",
       active: true,
@@ -144,7 +144,7 @@ export const DATA = {
         },
         {
           type: "Source",
-          href: "https://github.com/anuragparashar26/personal-blog/",
+          href: "https://github.com/anuragparashar26/devjournal/",
           icon: <Icons.github className="size-3" />, 
         },
       ],
