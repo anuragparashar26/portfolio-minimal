@@ -94,22 +94,24 @@ export const DATA = {
   projects: [
     {
       title: "Tarea - Organize Smarter",
-      href: "https://anuragparashar26.github.io/tarea/",
+      href: "https://tarea.anuragparashar.tech/",
       dates: "August 2025 - Present",
       active: true,
       description:
-        "Coming Soon!",
+        "Tarea is a productivity web app integrating note-taking and task management. Includes secure auth, responsive design, and smooth animations for streamlined workflows.",
       technologies: [
-        // "Next.js",
-        // "Typescript",
-        // "Node.js",
-        // "TailwindCSS",
-        // "MongoDB",
+        "Next.js",
+        "NextAuth.js",
+        "Typescript",
+        "TailwindCSS",
+        "PostgreSQL with Prisma ORM",
+        "TanStack Query",
+        "Framer Motion"
       ],
       links: [
         {
           type: "Website",
-          href: "https://anuragparashar26.github.io/tarea/",
+          href: "https://tarea.anuragparashar.tech/",
           icon: <Icons.globe className="size-3" />, 
         },
         {
