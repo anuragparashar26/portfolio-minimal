@@ -329,11 +329,13 @@ export const DATA = {
       dates: "June 2025",
       active: true,
       description:
-        "An app that generates a markdown-style directory tree of any public or private GitHub repository.",
+        "An app that generates a markdown-style directory tree of any public or private GitHub repository. Also available as a chromium-based extension.",
       technologies: [
         "React.js",
+        "JavaScript",
         "Typescript",
         "Tailwind CSS",
+        "Chrome Extension",
         "Vercel",
       ],
       links: [
@@ -345,6 +347,11 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/github-repo-tree-generator",
+          icon: <Icons.github className="size-3" />, 
+        },
+        {
+          type: "Get Extension",
+          href: "https://github.com/anuragparashar26/repotree-extension",
           icon: <Icons.github className="size-3" />, 
         },
       ],
