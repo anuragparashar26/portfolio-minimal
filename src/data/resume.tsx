@@ -130,7 +130,7 @@ export const DATA = {
       dates: "August 2025",
       active: true,
       description:
-        "A modern, responsive personal blog built with Next.js, TypeScript, and Tailwind CSS. Features a clean design with email subscription (Sendgrid) and cloud image uploads (Cloudinary) functionality for blog posts.",
+        "A modern, responsive personal blog built with Next.js, TypeScript, and Tailwind CSS. Features a clean design with email subscription and cloud image uploads functionality for blog posts.",
       technologies: [
         "Next.js",
         "Typescript",
