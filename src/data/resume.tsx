@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "Aspiring software developer. Proficient in web development. Passionate about AIML, Cybersecurity, Open Source and Design.",
   summary:
-    "Seeking a role in software and web development to leverage expertise in secure system design, full-stack development, and problem-solving. Interested in contributing to projects at the intersection of software engineering, AI/ML, and user-centric solutions, driving innovations in technology and digital security.",
+    "Software Engineer seeking challenging opportunities to design and develop scalable, secure, and user-friendly applications. Passionate about problem-solving and contributing to innovative software solutions.",
   avatarUrl: "/me.png",
   skills: {
     Frontend: ["ReactJs", "NextJs","Tailwind", "JavaScript", "Typescript"],
