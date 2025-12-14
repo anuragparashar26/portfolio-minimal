@@ -11,6 +11,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { ProjectCategory } from "@/components/project-category";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -186,32 +187,14 @@ export default async function Page() {
           {['Web Apps', 'Developer Tools', 'Desktop Apps', 'Utility'].map((cat) => {
             const projects = DATA.projects.filter((p) => p.category === cat);
             if (!projects.length) return null;
+
             return (
-              <div key={cat} className="space-y-2">
-                <BlurFade delay={BLUR_FADE_DELAY * 11.5}>
-                  <h3 className="text-xl font-semibold px-2 pt-4">{cat}</h3>
-                </BlurFade>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-                  {projects.map((project, id) => (
-                    <BlurFade
-                      key={project.title}
-                      delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                    >
-                      <ProjectCard
-                        href={project.href}
-                        key={project.title}
-                        title={project.title}
-                        description={project.description}
-                        dates={project.dates}
-                        tags={project.technologies}
-                        image={project.image}
-                        video={project.video}
-                        links={project.links}
-                      />
-                    </BlurFade>
-                  ))}
-                </div>
-              </div>
+              <ProjectCategory
+                key={cat}
+                category={cat}
+                projects={projects}
+                blurFadeDelay={BLUR_FADE_DELAY * 11.5}
+              />
             );
           })}
         </div>
