@@ -124,7 +124,34 @@ export const DATA = {
       video: "",
       category: "Web Apps",
     },
-    {
+        {
+      title: "AI-Based Traffic Management & Accident Prevention System",
+      href: "https://github.com/anuragparashar26/traffic-management",
+      dates: "March-August 2025",
+      active: true,
+      description:
+          "This computer vision project optimizes traffic signal timings with a genetic algorithm to reduce congestion and detects safety violations through helmet detection and license plate recognition.",
+      technologies: [
+        "React.js",
+        "YOLOv4/v8",
+        "Pytorch/Ultralytics",
+        "Flask",
+        "OpenCV",
+        "Paddle OCR",
+        "Supabase"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/traffic-management/",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/traffic.png",
+      video: "",
+      category: "Web Apps",
+    },
+        {
       title: "DevJournal - Blog for Everyone",
       href: "https://blog.anuragparashar.tech/",
       dates: "August 2025",
@@ -151,6 +178,36 @@ export const DATA = {
         },
       ],
       image: "/blog.png",
+      video: "",
+      category: "Web Apps",
+    },
+    {
+      title: "SkillScreen - Resume Screening Agent",
+      href: "https://blog.anuragparashar.tech/",
+      dates: "December 2025",
+      active: true,
+      description:
+        "SkillScreen is a single-page Streamlit app that helps recruiters evaluate and rank resumes against a Job Description (JD) using Google Gemini, LangChain, and ChromaDB.",
+      technologies: [
+        "Streamlit",
+        "Langchain",
+        "Gemini API",
+        "ChromaDB",
+        "Supabase",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://skillscreen.streamlit.app/",
+          icon: <Icons.globe className="size-3" />, 
+        },
+        {
+          type: "Source",
+          href: "https://github.com/anuragparashar26/skillscreen/",
+          icon: <Icons.github className="size-3" />, 
+        },
+      ],
+      image: "/skillscreen.png",
       video: "",
       category: "Web Apps",
     },
