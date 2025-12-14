@@ -56,15 +56,17 @@ export function ProjectCategory({ category, projects, blurFadeDelay }: ProjectCa
         ))}
       </div>
       {hasExtra && (
-        <div className="flex justify-center pt-3">
-          <button
-            type="button"
-            onClick={() => setExpanded(!expanded)}
-            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-sm font-semibold text-primary shadow-sm transition-all duration-300 hover:bg-primary/10 hover:shadow cursor-pointer"
-          >
-            {expanded ? "Show less" : `Show more (${extraCount} more)`}
-          </button>
-        </div>
+        <BlurFade delay={blurFadeDelay + 0.02 + Math.min(visibleProjects.length, 4) * 0.05}>
+          <div className="flex justify-center pt-3">
+            <button
+              type="button"
+              onClick={() => setExpanded(!expanded)}
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-sm font-semibold text-primary shadow-sm transition-all duration-300 hover:bg-primary/10 hover:shadow cursor-pointer"
+            >
+              {expanded ? "Show less" : `Show more (${extraCount} more)`}
+            </button>
+          </div>
+        </BlurFade>
       )}
     </div>
   );

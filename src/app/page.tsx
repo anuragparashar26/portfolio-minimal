@@ -55,35 +55,45 @@ export default async function Page() {
               delay={BLUR_FADE_DELAY}
               text={DATA.description}
             />
+            <div className="flex items-center gap-4 pt-3">
+              {Object.entries(DATA.contact.social)
+                .filter(([key, social]) => key !== 'email')
+                .map(([key, social], idx) => (
+                  <BlurFade key={key} delay={BLUR_FADE_DELAY + 0.05 + idx * 0.03}>
+                    <a
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.name}
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {social.icon && typeof social.icon === 'function' ? social.icon({ className: "size-5" }) : null}
+                    </a>
+                  </BlurFade>
+                ))}
+            </div>
           </div>
-          <BlurFade delay={BLUR_FADE_DELAY}>
-            <Avatar className="size-28 border">
-              <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-              <AvatarFallback>{DATA.initials}</AvatarFallback>
-            </Avatar>
-          </BlurFade>
+          <div className="flex flex-col items-center gap-3">
+            <BlurFade delay={BLUR_FADE_DELAY}>
+              <Avatar className="size-28 border">
+                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                <AvatarFallback>{DATA.initials}</AvatarFallback>
+              </Avatar>
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY + 0.1}>
+              <div className="flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1 text-xs font-medium text-green-600 dark:text-green-400">
+                <span className="relative flex size-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
+                  <span className="relative inline-flex size-2 rounded-full bg-green-500"></span>
+                </span>
+                Available for hire
+              </div>
+            </BlurFade>
+          </div>
         </div>
       </div>
     </section>
 
-    {/* Social Icons before About section */}                                               
-    <section id="social-icons" className="flex justify-start items-center gap-4 py-2">
-      {Object.entries(DATA.contact.social)
-        .filter(([key, social]) => key !== 'email')
-        .map(([key, social], idx) => (
-          <BlurFade key={key} delay={BLUR_FADE_DELAY * (2 + idx)}>
-            <a
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.name}
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              {social.icon && typeof social.icon === 'function' ? social.icon({ className: "size-5" }) : null}
-            </a>
-          </BlurFade>
-        ))}
-    </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
