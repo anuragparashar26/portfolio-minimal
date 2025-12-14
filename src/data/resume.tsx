@@ -8,16 +8,16 @@ export const DATA = {
   location: "Bengaluru, India",
   locationLink: "https://www.google.com/maps/place/bengaluru",
   description:
-    "Aspiring software developer. Proficient in web development. Passionate about AIML, Cybersecurity, Open Source and Design.",
+    "Full Stack AI Developer. Actively involved in Open Source, Cybersecurity, DevOps,  and Design.",
   summary:
-    "Software Engineer seeking challenging opportunities to design and develop scalable, secure, and user-friendly applications. Passionate about problem-solving and contributing to innovative software solutions.",
+    "Hey there! I am a computer science undergrad seeking challenging opportunities to design and develop scalable, secure, and user-friendly applications. Passionate about problem-solving and contributing to innovative software solutions.",
   avatarUrl: "/me.png",
   skills: {
     Frontend: ["ReactJs", "NextJs","Tailwind", "JavaScript", "Typescript"],
     Backend: ["NodeJs", "ExpressJs"],
-    Languages: ["C", "C++", "Java", "Python"],
-    Database: ["PostgreSQL", "MongoDB", "SQL"],
-    Tools: ["Figma", "Canva", , "Tableau", "Git", "Github", "Jenkins", "Jupyter", "Scikit-learn", "Docker", "Linux", "Vercel", "Render", "Supabase"],
+    Languages: ["Java", "Python"],
+    Database: ["PostgreSQL", "MongoDB"],
+    Tools: ["AWS", "Figma", "Canva", , "Tableau", "Git", "Github", "Jenkins", "Scikit-learn", "Docker", "Vercel", "Render", "Supabase"],
   },
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
