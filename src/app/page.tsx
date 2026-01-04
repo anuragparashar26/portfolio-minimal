@@ -111,14 +111,14 @@ export default async function Page() {
             href="https://drive.google.com/file/d/1-4luJ3zWE7XZgLHZIYHwK_nxqAQHMyoA/view?usp=sharing"
             rel="noopener noreferrer"
             target="_blank"
-            className="inline-block rounded bg-primary text-primary-foreground px-3 py-1 text-sm font-medium shadow hover:bg-primary/90 transition-colors"
+            className="inline-block rounded bg-primary text-primary-foreground px-6 py-2 text-sm font-medium shadow hover:bg-primary/90 transition-colors"
           >
             Resume
           </a>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 5 + 0.05}>
           <ContactScrollButton
-            className="inline-block rounded bg-primary text-primary-foreground px-3 py-1 text-sm font-medium shadow hover:bg-primary/90 transition-colors"
+            className="inline-block rounded bg-primary text-primary-foreground px-6 py-2 text-sm font-medium shadow hover:bg-primary/90 transition-colors"
           />
         </BlurFade>
       </div>

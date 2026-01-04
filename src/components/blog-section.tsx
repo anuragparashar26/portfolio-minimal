@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import BlurFade from "@/components/magicui/blur-fade";
+import SubscribeForm from "@/components/SubscribeForm";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -41,6 +42,7 @@ export function BlogSection({ posts, error }: { posts: BlogPost[]; error?: strin
 							</li>
 						))}
 					</ul>
+					<SubscribeForm />
 				</div>
 			</BlurFade>
 		</section>

@@ -8,7 +8,7 @@ export const DATA = {
   location: "Bengaluru, India",
   locationLink: "https://www.google.com/maps/place/bengaluru",
   description:
-    "Full Stack AI Developer. Actively involved in Open Source, Cybersec, DevOps, and Design.",
+    "Full Stack AI Developer. Actively involved in Open Source, Cybersecurity, DevOps, and Design.",
   summary:
     "I build software that blends AI, design, and the web.",
   avatarUrl: "/me.png",
