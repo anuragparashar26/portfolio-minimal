@@ -13,6 +13,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { ProjectCategory } from "@/components/project-category";
 import { DATA } from "@/data/resume";
+import { ContactScrollButton } from "@/components/ContactScrollButton";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { BlogSection, BlogPost } from "@/components/blog-section";
@@ -86,7 +87,7 @@ export default async function Page() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
                   <span className="relative inline-flex size-2 rounded-full bg-green-500"></span>
                 </span>
-                Available for hire
+                Available
               </div>
             </BlurFade>
           </div>
@@ -104,15 +105,21 @@ export default async function Page() {
           </Markdown>
         </BlurFade>
       </section>
-      <div className="mt-4 flex justify-left">
+      <div className="mt-4 flex gap-2 justify-left">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
           <a
             href="https://drive.google.com/file/d/1-4luJ3zWE7XZgLHZIYHwK_nxqAQHMyoA/view?usp=sharing"
             rel="noopener noreferrer"
-            className="inline-block rounded bg-primary text-primary-foreground px-6 py-2 font-semibold shadow hover:bg-primary/90 transition-colors"
+            target="_blank"
+            className="inline-block rounded bg-primary text-primary-foreground px-3 py-1 text-sm font-medium shadow hover:bg-primary/90 transition-colors"
           >
-            Resume 
+            Resume
           </a>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 5 + 0.05}>
+          <ContactScrollButton
+            className="inline-block rounded bg-primary text-primary-foreground px-3 py-1 text-sm font-medium shadow hover:bg-primary/90 transition-colors"
+          />
         </BlurFade>
       </div>
       {/* <section id="work">
