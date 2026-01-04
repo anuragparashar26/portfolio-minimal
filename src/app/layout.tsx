@@ -66,14 +66,14 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        {/* Normal Version button */}
+        {/* Switch Portfolio
         <a
-          href="https://anuragparashar.tech"
+          href="https://switch.anuragparashar.tech"
           rel="noopener noreferrer"
           className="fixed top-4 left-4 z-50 pointer-events-auto rounded bg-primary text-primary-foreground px-4 py-1 font-semibold shadow hover:bg-primary/90 transition-colors text-sm hidden sm:inline-block"
         >
-          Normal Version
-        </a>
+          Switch Portfolio
+        </a> */}
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}
