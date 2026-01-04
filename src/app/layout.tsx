@@ -80,7 +80,9 @@ export default function RootLayout({
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
-        <OnekoCat/>
+        <div className="hidden sm:block">
+          <OnekoCat/>
+        </div>
         <Analytics />
       </body>
     </html>

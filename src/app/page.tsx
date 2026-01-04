@@ -1,8 +1,8 @@
 import { headers } from "next/headers";
 
 export const metadata = {
-  title: "Anurag's Minimal Portfolio",
-  description: "A minimal portfolio by Anurag Parashar.",
+  title: "Anurag's Portfolio",
+  description: "The portfolio of Anurag Parashar.",
 };
 // import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
