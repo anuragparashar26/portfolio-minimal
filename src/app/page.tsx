@@ -12,6 +12,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { ProjectCategory } from "@/components/project-category";
+import GithubActivity from "@/components/github-activity";
 import { DATA } from "@/data/resume";
 import { ContactScrollButton } from "@/components/ContactScrollButton";
 import Link from "next/link";
@@ -42,7 +43,7 @@ export default async function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-6">
     <section id="hero">
-      <div className="mx-auto w-full max-w-2xl space-y-6">
+      <div className="mx-auto w-full max-w-3xl space-y-6">
         <div className="gap-2 flex justify-between">
           <div className="flex-col flex flex-1 space-y-1.5">
             <BlurFadeText
@@ -182,6 +183,13 @@ export default async function Page() {
               </BlurFade>
             ))}
           </div>
+        </div>
+      </section>
+      <section id="github-activity">
+        <div className="flex min-h-0 flex-col gap-y-2">
+          <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+            <GithubActivity />
+          </BlurFade>
         </div>
       </section>
       <section id="projects">

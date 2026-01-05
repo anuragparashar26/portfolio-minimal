@@ -11,7 +11,7 @@ export function BlogSection({ posts, error }: { posts: BlogPost[]; error?: strin
 	return (
 		<section id="blog" className="w-full py-2">
 			<BlurFade delay={BLUR_FADE_DELAY * 15.5}>
-				<div className="space-y-6 p-2">
+				<div className="space-y-6 px-0 sm:px-2">
 					<div className="flex flex-col items-center justify-center space-y-4 text-center">
 						<div className="space-y-2">
 							<div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -26,7 +26,7 @@ export function BlogSection({ posts, error }: { posts: BlogPost[]; error?: strin
 						</div>
 					</div>
 					{error && <div className="text-red-500">{error}</div>}
-					<ul className="mb-4 ml-4 divide-y divide-dashed">
+					<ul className="mb-4 divide-y divide-dashed">
 						{!error && posts.length === 0 && <li>Loading...</li>}
 						{posts.map((post, idx) => (
 							<li key={idx} className="py-2 text-lg font-medium">
