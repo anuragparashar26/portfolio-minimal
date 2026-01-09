@@ -127,7 +127,7 @@ export default function GithubActivity() {
   const showCalendar = !isLoading && !hasError && contributions.length > 0;
 
   return (
-    <div className="overflow-hidden rounded-2xl border bg-card text-card-foreground shadow-sm">
+    <div className="overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm">
       <div className="flex flex-wrap items-start justify-between gap-3 border-b px-4 py-4 sm:px-6">
         <div className="space-y-1">
           <p className="text-xs uppercase tracking-wide text-muted-foreground">
