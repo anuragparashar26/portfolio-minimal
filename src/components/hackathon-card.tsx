@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 interface Props {
@@ -52,6 +53,7 @@ export function HackathonCard({
               <Badge key={idx} title={link.title} className="flex gap-2">
                 {link.icon}
                 {link.title}
+                <ArrowUpRight className="size-3" />
               </Badge>
             </Link>
           ))}

@@ -11,6 +11,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { ArrowUpRight } from "lucide-react";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import GithubActivity from "@/components/github-activity";
 import { DATA } from "@/data/resume";
@@ -264,9 +265,10 @@ export default async function Page() {
                           href={cert.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block rounded bg-primary text-primary-foreground px-3 py-1 font-semibold shadow hover:bg-primary/90 transition-colors text-xs"
+                          className="inline-flex items-center gap-1.5 rounded bg-primary text-primary-foreground px-3 py-1 font-semibold shadow hover:bg-primary/90 transition-colors text-xs"
                         >
                           View Credential
+                          <ArrowUpRight className="size-3" />
                         </a>
                       )}
                     </div>

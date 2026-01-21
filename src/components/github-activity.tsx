@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 
 import { Icons } from "./icons";
 import { Button } from "./ui/button";
@@ -152,6 +153,7 @@ export default function GithubActivity() {
           >
             <Icons.github className="size-4" />
             View profile
+            <ArrowUpRight className="size-3.5" />
           </Link>
         </Button>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
 
@@ -112,6 +113,7 @@ export function ProjectsSection({ projects, blurFadeDelay }: ProjectsSectionProp
               className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-sm font-semibold text-primary shadow-sm transition-all duration-300 hover:bg-primary/10 hover:shadow cursor-pointer"
             >
               {showAll ? "View less" : "View all"}
+              {!showAll && <ArrowUpRight className="size-3.5" />}
             </button>
           </div>
         </BlurFade>

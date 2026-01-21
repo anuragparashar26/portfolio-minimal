@@ -55,7 +55,7 @@ export function ViewCounter() {
 
   return (
     <BlurFade delay={0.2}>
-      <div className="py-2 flex justify-center">
+      <div className="py-2 mb-10 flex justify-center">
         <div className="inline-flex items-center gap-2 rounded-xl border bg-background px-4 py-2">
           <Eye className="size-4 text-muted-foreground" />
           <span className="text-sm text-muted-foreground">
