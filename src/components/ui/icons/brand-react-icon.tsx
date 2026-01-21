@@ -2,7 +2,7 @@
 
 import { forwardRef, useImperativeHandle } from "react";
 import { motion, useAnimate } from "motion/react";
-import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
+import type { AnimatedIconHandle, AnimatedIconProps } from "../types";
 
 const BrandReactIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
