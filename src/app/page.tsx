@@ -35,6 +35,7 @@ import CoffeeIcon from "@/components/ui/icons/coffee-icon";
 import CodeIcon from "@/components/ui/icons/code-icon";
 import BrandAwsIcon from "@/components/ui/icons/brand-aws-icon";
 import MysqlIcon from "@/components/ui/icons/mysql-icon";
+import MongodbIcon from "@/components/ui/icons/mongodb-icon";
 import PhoneVolumeIcon from "@/components/ui/icons/phone-volume";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -202,7 +203,7 @@ export default async function Page() {
                   "Java": CoffeeIcon,
                   "Python": PythonIcon,
                   "PostgreSQL": MysqlIcon,
-                  "MongoDB": MysqlIcon,
+                  "MongoDB": MongodbIcon,
                   "AWS": BrandAwsIcon,
                   "Figma": FigmaIcon,
                   "Docker": DockerIcon
