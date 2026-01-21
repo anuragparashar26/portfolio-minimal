@@ -81,16 +81,16 @@ export const DATA = {
   //   },
   // ],
     
-  education: [
-    {
-      school: "JSSATE, Bengaluru",
-      href: "https://jssateb.ac.in/",
-      degree: "Bachelor of Engineering in Information Science and Engineering",
-      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4rqjvB0pbMwXVAg6qaFy67iz2xoO3N_qT7g&s",
-      start: "2022",
-      end: "2026",
-    }
-  ],
+  // education: [
+  //   {
+  //     school: "JSSATE, Bengaluru",
+  //     href: "https://jssateb.ac.in/",
+  //     degree: "Bachelor of Engineering in Information Science and Engineering",
+  //     logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4rqjvB0pbMwXVAg6qaFy67iz2xoO3N_qT7g&s",
+  //     start: "2022",
+  //     end: "2026",
+  //   }
+  // ],
   projects: [
     {
       title: "Tarea - Organize Smarter",
@@ -123,6 +123,7 @@ export const DATA = {
       image: "/tarea.png",
       video: "",
       category: "Web Apps",
+      status: "ongoing" as const,
     },
         {
       title: "AI-Based Traffic Management & Accident Prevention System",
@@ -150,6 +151,7 @@ export const DATA = {
       image: "/traffic.png",
       video: "",
       category: "Web Apps",
+      status: "live" as const,
     },
         {
       title: "DevJournal - Blog for Everyone",
@@ -180,6 +182,7 @@ export const DATA = {
       image: "/blog.png",
       video: "",
       category: "Web Apps",
+      status: "live" as const,
     },
     {
       title: "SkillScreen - Resume Screening Agent",
@@ -210,6 +213,7 @@ export const DATA = {
       image: "/skillscreen.png",
       video: "",
       category: "Web Apps",
+      status: "live" as const,
     },
     {
       title: "CyberTron",
@@ -241,6 +245,7 @@ export const DATA = {
       image: "/cyber.png",
       video: "",
       category: "Web Apps",
+      status: "live" as const,
     },
     {
       title: "ShowDevKit - A Portfolio for Developers",
@@ -271,6 +276,7 @@ export const DATA = {
       image: "/showdevkit.png",
       video: "",
       category: "Web Apps",
+      status: "live" as const,
     },
     {
       title: "Lendwise",
@@ -300,8 +306,7 @@ export const DATA = {
       ],
       image: "/loan.png",
       video: "",
-      category: "Web Apps",
-    },
+      category: "Web Apps",      status: "live" as const,    },
     {
       title: "Lost and Found Platform",
       href: "https://lostandfoundmini.netlify.app/",
@@ -332,6 +337,7 @@ export const DATA = {
       video:
         "",
       category: "Web Apps",
+      status: "live" as const,
     },
     {
       title: "txt2chat",
@@ -356,6 +362,7 @@ export const DATA = {
       video:
         "",
       category: "Web Apps",
+      status: "live" as const,
     },
     {
       title: "Focus Flick",
@@ -379,6 +386,7 @@ export const DATA = {
       video:
         "",
       category: "Developer Tools",
+      status: "live" as const,
     },
     {
       title: "Github Repo Tree Generator",
@@ -416,6 +424,7 @@ export const DATA = {
       video:
         "",
       category: "Developer Tools",
+      status: "live" as const,
     },
     {
       title: "WhatsBlur",
@@ -439,6 +448,7 @@ export const DATA = {
       video:
         "",
       category: "Developer Tools",
+      status: "live" as const,
     },
     {
       title: "Hostel Management System",
@@ -463,6 +473,7 @@ export const DATA = {
       video:
         "",
       category: "Desktop Apps",
+      status: "live" as const,
     },
   ],
   certifications: [

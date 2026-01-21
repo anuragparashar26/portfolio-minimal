@@ -15,6 +15,7 @@ interface Project {
   image: string;
   video: string;
   category: string;
+  status?: "live" | "ongoing";
 }
 
 interface ProjectCategoryProps {
@@ -51,6 +52,7 @@ export function ProjectCategory({ category, projects, blurFadeDelay }: ProjectCa
               image={project.image}
               video={project.video}
               links={project.links}
+              status={project.status}
             />
           </BlurFade>
         ))}

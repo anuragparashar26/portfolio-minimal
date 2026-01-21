@@ -26,6 +26,7 @@ interface Props {
     href: string;
   }[];
   className?: string;
+  status?: "live" | "ongoing";
 }
 
 export function ProjectCard({
@@ -39,6 +40,7 @@ export function ProjectCard({
   video,
   links,
   className,
+  status,
 }: Props) {
   return (
     <Card
@@ -57,7 +59,7 @@ export function ProjectCard({
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
           />
         )}
         {image && (
@@ -98,18 +100,33 @@ export function ProjectCard({
         )}
       </CardContent>
       <CardFooter className="px-2 pb-2">
-        {links && links.length > 0 && (
-          <div className="flex flex-row flex-wrap items-start gap-1">
-            {links?.map((link, idx) => (
-              <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                  {link.icon}
-                  {link.type}
-                </Badge>
-              </Link>
-            ))}
-          </div>
-        )}
+        <div className="flex flex-row flex-wrap items-center justify-between gap-2 w-full">
+          {links && links.length > 0 && (
+            <div className="flex flex-row flex-wrap items-start gap-1">
+              {links?.map((link, idx) => (
+                <Link href={link?.href} key={idx} target="_blank">
+                  <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                    {link.icon}
+                    {link.type}
+                  </Badge>
+                </Link>
+              ))}
+            </div>
+          )}
+          {status && (
+            <div className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-muted border border-border ml-auto">
+              <div
+                className={cn(
+                  "w-1.5 h-1.5 rounded-full flex-shrink-0",
+                  status === "live" ? "bg-green-500 animate-pulse" : "bg-yellow-500"
+                )}
+              />
+              <span className="text-[10px] font-bold font-sans whitespace-nowrap">
+                {status === "live" ? "Live" : "In Progress"}
+              </span>
+            </div>
+          )}
+        </div>
       </CardFooter>
     </Card>
   );

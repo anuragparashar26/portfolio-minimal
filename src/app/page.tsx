@@ -11,13 +11,30 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { ProjectCategory } from "@/components/project-category";
+import { ProjectsSection } from "@/components/ProjectsSection";
 import GithubActivity from "@/components/github-activity";
 import { DATA } from "@/data/resume";
 import { ContactScrollButton } from "@/components/ContactScrollButton";
+import { ResumeButton } from "@/components/ResumeButton";
+import { LocalTime } from "@/components/LocalTime";
+import { ViewCounter } from "@/components/ViewCounter";
+import { SkillBadge } from "@/components/SkillBadge";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { BlogSection, BlogPost } from "@/components/blog-section";
+import BrandReactIcon from "@/components/ui/icons/brand-react-icon";
+import BrandNextjsIcon from "@/components/ui/icons/brand-nextjs-icon";
+import JavascriptIcon from "@/components/ui/icons/javascript-icon";
+import TypescriptIcon from "@/components/ui/icons/typescript-icon";
+import NodejsIcon from "@/components/ui/icons/nodejs-icon";
+import PythonIcon from "@/components/ui/icons/python-icon";
+import DockerIcon from "@/components/ui/icons/docker-icon";
+import FigmaIcon from "@/components/ui/icons/figma-icon";
+import CoffeeIcon from "@/components/ui/icons/coffee-icon";
+import CodeIcon from "@/components/ui/icons/code-icon";
+import BrandAwsIcon from "@/components/ui/icons/brand-aws-icon";
+import MysqlIcon from "@/components/ui/icons/mysql-icon";
+import PhoneVolumeIcon from "@/components/ui/icons/phone-volume";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -43,6 +60,7 @@ export default async function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-6">
     <section id="hero">
+      <LocalTime />
       <div className="mx-auto w-full max-w-3xl space-y-6">
         <div className="gap-2 flex justify-between">
           <div className="flex-col flex flex-1 space-y-1.5">
@@ -106,20 +124,13 @@ export default async function Page() {
           </Markdown>
         </BlurFade>
       </section>
-      <div className="mt-4 flex gap-2 justify-left">
+      <div className="mt-4 flex gap-2 items-center">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <a
-            href="https://drive.google.com/file/d/1-4luJ3zWE7XZgLHZIYHwK_nxqAQHMyoA/view?usp=sharing"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="inline-block rounded bg-primary text-primary-foreground px-6 py-2 text-sm font-medium shadow hover:bg-primary/90 transition-colors"
-          >
-            Resume
-          </a>
+          <ResumeButton />
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 5 + 0.05}>
           <ContactScrollButton
-            className="inline-block rounded bg-primary text-primary-foreground px-6 py-2 text-sm font-medium shadow hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-300 border bg-background text-foreground border-border hover:border-foreground/50 hover:shadow-sm"
           />
         </BlurFade>
       </div>
@@ -148,7 +159,7 @@ export default async function Page() {
           ))}
         </div>
       </section> */}
-      <section id="education">
+      {/* <section id="education">
         <div className="flex min-h-0 flex-col gap-y-2">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">Education</h2>
@@ -170,18 +181,39 @@ export default async function Page() {
             </BlurFade>
           ))}
         </div>
-      </section>
+      </section> */}
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-2">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
-            {Object.values(DATA.skills).flat().map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
+            {Object.entries(DATA.skills).map(([category, skills]) => (
+              skills.map((skill, id) => {
+                const skillIcons: Record<string, any> = {
+                  "ReactJs": BrandReactIcon,
+                  "NextJs": BrandNextjsIcon,
+                  "Tailwind": CodeIcon,
+                  "JavaScript": JavascriptIcon,
+                  "Typescript": TypescriptIcon,
+                  "NodeJs": NodejsIcon,
+                  "ExpressJs": CodeIcon,
+                  "Java": CoffeeIcon,
+                  "Python": PythonIcon,
+                  "PostgreSQL": MysqlIcon,
+                  "MongoDB": MysqlIcon,
+                  "AWS": BrandAwsIcon,
+                  "Figma": FigmaIcon,
+                  "Docker": DockerIcon
+                };
+                const IconComponent = skillIcons[skill] || CodeIcon;
+                return (
+                  <BlurFade key={`${category}-${skill}`} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                    <SkillBadge IconComponent={IconComponent} skill={skill} />
+                  </BlurFade>
+                );
+              })
+            )).flat()}
           </div>
         </div>
       </section>
@@ -193,36 +225,7 @@ export default async function Page() {
         </div>
       </section>
       <section id="projects">
-        <div className="space-y-6 w-full py-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Projects
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my work
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Here are some projects I've worked on.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
-          {['Web Apps', 'Developer Tools', 'Desktop Apps', 'Utility'].map((cat) => {
-            const projects = DATA.projects.filter((p) => p.category === cat);
-            if (!projects.length) return null;
-
-            return (
-              <ProjectCategory
-                key={cat}
-                category={cat}
-                projects={projects}
-                blurFadeDelay={BLUR_FADE_DELAY * 11.5}
-              />
-            );
-          })}
-        </div>
+        <ProjectsSection projects={DATA.projects} blurFadeDelay={BLUR_FADE_DELAY * 11} />
       </section>
       <section id="certifications">
         <div className="space-y-6 w-full py-6">
@@ -276,7 +279,7 @@ export default async function Page() {
       </section>
   <BlogSection posts={posts} error={error} />
       <section id="contact">
-        <div className="grid items-center justify-center gap-2 px-4 text-center md:px-6 w-full py-6 mb-6">
+        <div className="grid items-center justify-center gap-2 px-4 text-center md:px-6 w-full py-2 mb-2">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -304,6 +307,9 @@ export default async function Page() {
           </BlurFade>
         </div>
       </section>
+      <div className="pb-20 sm:pb-0">
+        <ViewCounter />
+      </div>
     </main>
   );
 }
