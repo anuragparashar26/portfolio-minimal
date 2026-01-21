@@ -309,7 +309,7 @@ export default async function Page() {
           </BlurFade>
         </div>
       </section>
-      <div className="pb-20 sm:pb-0">
+      <div className="pb-10 sm:pb-0">
         <ViewCounter />
       </div>
     </main>
