@@ -1,3 +1,5 @@
+"use client";
+
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ArrowLeftRightIcon } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -11,6 +13,7 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { useRef } from "react";
 
 export default function Navbar() {
   return (
@@ -41,7 +44,6 @@ export default function Navbar() {
               </DockIcon>
             );
           }
-          // All other icons remain unchanged
           return (
             <DockIcon key={item.href}>
               <Tooltip>
@@ -68,28 +70,34 @@ export default function Navbar() {
         <Separator orientation="vertical" className="h-full" />
         {Object.entries(DATA.contact.social)
           .filter(([_, social]) => social.navbar)
-          .map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
-                    )}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <social.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
+          .map(([name, social]) => {
+            const iconRef = useRef<any>(null);
+            
+            return (
+              <DockIcon key={name}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={social.url}
+                      className={cn(
+                        buttonVariants({ variant: "ghost", size: "icon" }),
+                        "size-12"
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onMouseEnter={() => iconRef.current?.startAnimation?.()}
+                      onMouseLeave={() => iconRef.current?.stopAnimation?.()}
+                    >
+                      <social.icon ref={iconRef} className="size-5" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </DockIcon>
+            );
+          })}
         <Separator orientation="vertical" className="h-full py-2 mr-1" />
   {/* Mobile: switch icon beside theme toggle */}
         <div className="flex items-center">

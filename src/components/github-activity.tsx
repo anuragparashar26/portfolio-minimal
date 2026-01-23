@@ -4,7 +4,7 @@ import { githubConfig } from "@/config/github";
 import dynamic from "next/dynamic";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 import { Icons } from "./icons";
@@ -45,6 +45,7 @@ export default function GithubActivity() {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const { theme } = useTheme();
+  const githubIconRef = useRef<any>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -149,9 +150,16 @@ export default function GithubActivity() {
         <Button variant="outline" size="sm" asChild>
           <Link
             href={`https://github.com/${githubConfig.username}`}
+            target="_blank"
             className="inline-flex items-center gap-2"
+            onMouseEnter={() => githubIconRef.current?.startAnimation?.()}
+            onMouseLeave={() => githubIconRef.current?.stopAnimation?.()}
+            onClick={() => {
+              githubIconRef.current?.startAnimation?.();
+              setTimeout(() => githubIconRef.current?.stopAnimation?.(), 300);
+            }}
           >
-            <Icons.github className="size-4" />
+            <Icons.github ref={githubIconRef} className="size-4"/>
             View profile
             <ArrowUpRight className="size-3.5" />
           </Link>

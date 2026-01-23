@@ -20,6 +20,7 @@ import { ResumeButton } from "@/components/ResumeButton";
 import { LocalTime } from "@/components/LocalTime";
 import { ViewCounter } from "@/components/ViewCounter";
 import { SkillBadge } from "@/components/SkillBadge";
+import { AnimatedHeroSocialIcons } from "@/components/AnimatedHeroSocialIcons";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { BlogSection, BlogPost } from "@/components/blog-section";
@@ -77,23 +78,7 @@ export default async function Page() {
               delay={BLUR_FADE_DELAY}
               text={DATA.description}
             />
-            <div className="flex items-center gap-4 pt-3">
-              {Object.entries(DATA.contact.social)
-                .filter(([key, social]) => key !== 'email')
-                .map(([key, social], idx) => (
-                  <BlurFade key={key} delay={BLUR_FADE_DELAY + 0.05 + idx * 0.03}>
-                    <a
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.name}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {social.icon && typeof social.icon === 'function' ? social.icon({ className: "size-5" }) : null}
-                    </a>
-                  </BlurFade>
-                ))}
-            </div>
+            <AnimatedHeroSocialIcons />
           </div>
           <div className="flex flex-col items-center gap-3">
             <BlurFade delay={BLUR_FADE_DELAY}>
