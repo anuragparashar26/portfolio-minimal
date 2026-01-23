@@ -157,3 +157,44 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 .button-accent {
   @apply inline-flex items-center justify-center whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
 }
+
+/* Circular Theme Transition Animation */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 999;
+}
+
+/* Apply animation only when not in reduced motion mode */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-new(root) {
+    clip-path: circle(0 at var(--transition-x, 50%) var(--transition-y, 50%));
+    animation: circle-expand 0.5s ease-out forwards;
+  }
+}
+
+/* Disable all CSS transitions during view transition to prevent flicker */
+::view-transition-image-pair(root) {
+  isolation: isolate;
+}
+
+html.view-transition-active *,
+html.view-transition-active *::before,
+html.view-transition-active *::after {
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+@keyframes circle-expand {
+  to {
+    clip-path: circle(var(--transition-r, 150vh) at var(--transition-x, 50%) var(--transition-y, 50%));
+  }
+}

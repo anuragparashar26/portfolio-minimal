@@ -75,7 +75,7 @@ export default function RootLayout({
         >
           Switch Portfolio
         </a> */}
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
           <TooltipProvider delayDuration={0}>
             {children}
             <Navbar />
