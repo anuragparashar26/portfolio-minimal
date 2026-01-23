@@ -1,16 +1,17 @@
-import { GlobeIcon, MailIcon, Code2Icon, Contact2Icon } from "lucide-react";
+import { MailIcon, Code2Icon, Contact2Icon } from "lucide-react";
 import GithubIcon from "@/components/ui/icons/github-icon";
 import LinkedinIcon from "@/components/ui/icons/linkedin-icon";
 import TwitterXIcon from "@/components/ui/icons/twitter-x-icon";
 import LeetCodeIcon from "@/components/ui/icons/leetcode-icon";
 import PeerlistIcon from "@/components/ui/icons/peerlist-icon";
+import GlobeIcon from "@/components/ui/icons/globe-icon";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
 leetcode: LeetCodeIcon,
   peerlist: PeerlistIcon,
-  globe: (props: IconProps) => <GlobeIcon {...props} />,
+  globe: GlobeIcon,
   email: (props: IconProps) => <MailIcon {...props} />,
   linkedin: LinkedinIcon,
   x: TwitterXIcon,
