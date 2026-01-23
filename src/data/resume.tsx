@@ -112,12 +112,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://tarea.anuragparashar.tech/",
-          icon: <Icons.globe className="size-3" />, 
+          icon: <Icons.globe className="size-4" />, 
         },
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/tarea",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/tarea.png",
@@ -145,7 +145,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/traffic-management/",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/traffic.png",
@@ -171,12 +171,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://blog.anuragparashar.tech/",
-          icon: <Icons.globe className="size-3" />, 
+          icon: <Icons.globe className="size-4" />, 
         },
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/devjournal/",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/blog.png",
@@ -202,12 +202,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://skillscreen.streamlit.app/",
-          icon: <Icons.globe className="size-3" />, 
+          icon: <Icons.globe className="size-4" />, 
         },
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/skillscreen/",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/skillscreen.png",
@@ -234,12 +234,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://cybertron-uvmm.onrender.com/",
-          icon: <Icons.globe className="size-3" />, 
+          icon: <Icons.globe className="size-4" />, 
         },
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/CyberTron",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/cyber.png",
@@ -265,12 +265,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://showdevkit.netlify.app/",
-          icon: <Icons.globe className="size-3" />,
+          icon: <Icons.globe className="size-4" />,
         },
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/showdevkit/",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/showdevkit.png",
@@ -296,12 +296,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://loan-web-app-frontend-ew3f.onrender.com/",
-          icon: <Icons.globe className="size-3" />, 
+          icon: <Icons.globe className="size-4" />, 
         },
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/loan-web-app",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/loan.png",
@@ -325,12 +325,12 @@ export const DATA = {
         {
           type: "Website",
           href: "https://lostandfoundmini.netlify.app/",
-          icon: <Icons.globe className="size-3" />, 
+          icon: <Icons.globe className="size-4" />, 
         },
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/LostandFound",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/lostfound.png",
@@ -355,7 +355,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/txt2chat",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/txt2chat.png",
@@ -379,7 +379,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/focus-flick",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/focus.png",
@@ -407,17 +407,17 @@ export const DATA = {
         {
           type: "Website",
           href: "https://github-repo-tree-generator.vercel.app/",
-          icon: <Icons.globe className="size-3" />, 
+          icon: <Icons.globe className="size-4" />, 
         },
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/github-repo-tree-generator",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
         {
           type: "Get Extension",
           href: "https://github.com/anuragparashar26/repotree-extension",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/repo.png",
@@ -441,7 +441,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/whatsblur-chrome-extension",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/whatsblur.png",
@@ -466,7 +466,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/anuragparashar26/java-jdbc-swing",
-          icon: <Icons.github className="size-3" />, 
+          icon: <Icons.github className="size-4" />, 
         },
       ],
       image: "/swing.png",

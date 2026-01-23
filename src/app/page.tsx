@@ -38,6 +38,9 @@ import BrandAwsIcon from "@/components/ui/icons/brand-aws-icon";
 import MysqlIcon from "@/components/ui/icons/mysql-icon";
 import MongodbIcon from "@/components/ui/icons/mongodb-icon";
 import PhoneVolumeIcon from "@/components/ui/icons/phone-volume";
+import ExpressIcon from "@/components/ui/icons/express-icon";
+import PostgresIcon from "@/components/ui/icons/postgres-icon";
+import TailwindIcon from "@/components/ui/icons/tailwind-icon";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -180,14 +183,14 @@ export default async function Page() {
                 const skillIcons: Record<string, any> = {
                   "ReactJs": BrandReactIcon,
                   "NextJs": BrandNextjsIcon,
-                  "Tailwind": CodeIcon,
+                  "Tailwind": TailwindIcon,
                   "JavaScript": JavascriptIcon,
                   "Typescript": TypescriptIcon,
                   "NodeJs": NodejsIcon,
-                  "ExpressJs": CodeIcon,
+                  "ExpressJs": ExpressIcon,
                   "Java": CoffeeIcon,
                   "Python": PythonIcon,
-                  "PostgreSQL": MysqlIcon,
+                  "PostgreSQL": PostgresIcon,
                   "MongoDB": MongodbIcon,
                   "AWS": BrandAwsIcon,
                   "Figma": FigmaIcon,

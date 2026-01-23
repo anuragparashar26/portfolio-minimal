@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -11,6 +13,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { useRef, cloneElement, isValidElement } from "react";
 
 interface Props {
   title: string;
@@ -104,15 +107,29 @@ export function ProjectCard({
         <div className="flex flex-row flex-wrap items-center justify-between gap-2 w-full">
           {links && links.length > 0 && (
             <div className="flex flex-row flex-wrap items-start gap-1">
-              {links?.map((link, idx) => (
-                <Link href={link?.href} key={idx} target="_blank">
-                  <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                    {link.icon}
-                    {link.type}
-                    <ArrowUpRight className="size-3" />
-                  </Badge>
-                </Link>
-              ))}
+              {links?.map((link, idx) => {
+                const iconRef = useRef<any>(null);
+                
+                const animatedIcon = isValidElement(link.icon)
+                  ? cloneElement(link.icon as React.ReactElement, { ref: iconRef })
+                  : link.icon;
+
+                return (
+                  <Link 
+                    href={link?.href} 
+                    key={idx} 
+                    target="_blank"
+                    onMouseEnter={() => iconRef.current?.startAnimation?.()}
+                    onMouseLeave={() => iconRef.current?.stopAnimation?.()}
+                  >
+                    <Badge className="flex gap-2 px-2 py-1 text-[10px] cursor-pointer">
+                      {animatedIcon}
+                      {link.type}
+                      <ArrowUpRight className="size-3" />
+                    </Badge>
+                  </Link>
+                );
+              })}
             </div>
           )}
           {status && (
