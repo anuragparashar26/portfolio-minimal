@@ -104,9 +104,9 @@ export function ProjectCard({
         )}
       </CardContent>
       <CardFooter className="px-2 pb-2">
-        <div className="flex flex-row flex-wrap items-center justify-between gap-2 w-full">
+        <div className="flex flex-row items-center justify-between gap-2 w-full">
           {links && links.length > 0 && (
-            <div className="flex flex-row flex-wrap items-start gap-1">
+            <div className="flex flex-row flex-wrap items-start gap-1 flex-1">
               {links?.map((link, idx) => {
                 const iconRef = useRef<any>(null);
                 
@@ -133,7 +133,7 @@ export function ProjectCard({
             </div>
           )}
           {status && (
-            <div className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-muted border border-border ml-auto">
+            <div className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-muted border border-border flex-shrink-0">
               <div
                 className={cn(
                   "w-1.5 h-1.5 rounded-full flex-shrink-0",
