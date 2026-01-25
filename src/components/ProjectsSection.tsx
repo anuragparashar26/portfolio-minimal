@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { useState, useRef } from "react";
+import ArrowUpRightIcon from "@/components/ui/arrow-up-right-icon";
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
 
@@ -111,9 +111,17 @@ export function ProjectsSection({ projects, blurFadeDelay }: ProjectsSectionProp
               type="button"
               onClick={() => setShowAll(!showAll)}
               className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-sm font-semibold text-primary shadow-sm transition-all duration-300 hover:bg-primary/10 hover:shadow cursor-pointer"
+              onMouseEnter={(e) => {
+                const icon = e.currentTarget.querySelector('svg');
+                if (icon && (icon as any).startAnimation) (icon as any).startAnimation();
+              }}
+              onMouseLeave={(e) => {
+                const icon = e.currentTarget.querySelector('svg');
+                if (icon && (icon as any).stopAnimation) (icon as any).stopAnimation();
+              }}
             >
               {showAll ? "View less" : "View all"}
-              {!showAll && <ArrowUpRight className="size-3.5" />}
+              {!showAll && <ArrowUpRightIcon size={14} />}
             </button>
           </div>
         </BlurFade>

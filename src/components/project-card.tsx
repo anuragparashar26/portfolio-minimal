@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight } from "lucide-react";
+import ArrowUpRightIcon from "@/components/ui/arrow-up-right-icon";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -114,18 +114,26 @@ export function ProjectCard({
                   ? cloneElement(link.icon as React.ReactElement, { ref: iconRef })
                   : link.icon;
 
+                const arrowRef = useRef<any>(null);
+                
                 return (
                   <Link 
                     href={link?.href} 
                     key={idx} 
                     target="_blank"
-                    onMouseEnter={() => iconRef.current?.startAnimation?.()}
-                    onMouseLeave={() => iconRef.current?.stopAnimation?.()}
+                    onMouseEnter={() => {
+                      iconRef.current?.startAnimation?.();
+                      arrowRef.current?.startAnimation?.();
+                    }}
+                    onMouseLeave={() => {
+                      iconRef.current?.stopAnimation?.();
+                      arrowRef.current?.stopAnimation?.();
+                    }}
                   >
                     <Badge className="flex gap-2 px-2 py-1 text-[10px] cursor-pointer">
                       {animatedIcon}
                       {link.type}
-                      <ArrowUpRight className="size-3" />
+                      <ArrowUpRightIcon ref={arrowRef} size={12} />
                     </Badge>
                   </Link>
                 );

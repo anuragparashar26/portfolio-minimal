@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
-import { ArrowUpRight } from "lucide-react";
+import ArrowUpRightIcon from "@/components/ui/arrow-up-right-icon";
 
 import { Icons } from "./icons";
 import { Button } from "./ui/button";
@@ -46,6 +46,7 @@ export default function GithubActivity() {
   const [hasError, setHasError] = useState(false);
   const { theme } = useTheme();
   const githubIconRef = useRef<any>(null);
+  const arrowRef = useRef<any>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -152,8 +153,14 @@ export default function GithubActivity() {
             href={`https://github.com/${githubConfig.username}`}
             target="_blank"
             className="inline-flex items-center gap-2"
-            onMouseEnter={() => githubIconRef.current?.startAnimation?.()}
-            onMouseLeave={() => githubIconRef.current?.stopAnimation?.()}
+            onMouseEnter={() => {
+              githubIconRef.current?.startAnimation?.();
+              arrowRef.current?.startAnimation?.();
+            }}
+            onMouseLeave={() => {
+              githubIconRef.current?.stopAnimation?.();
+              arrowRef.current?.stopAnimation?.();
+            }}
             onClick={() => {
               githubIconRef.current?.startAnimation?.();
               setTimeout(() => githubIconRef.current?.stopAnimation?.(), 300);
@@ -161,7 +168,7 @@ export default function GithubActivity() {
           >
             <Icons.github ref={githubIconRef} className="size-4"/>
             View profile
-            <ArrowUpRight className="size-3.5" />
+            <ArrowUpRightIcon ref={arrowRef} size={14} />
           </Link>
         </Button>
       </div>

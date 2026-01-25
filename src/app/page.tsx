@@ -11,7 +11,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { ArrowUpRight } from "lucide-react";
+import { CertificationLink } from "@/components/CertificationLink";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import GithubActivity from "@/components/github-activity";
 import { DATA } from "@/data/resume";
@@ -249,17 +249,7 @@ export default async function Page() {
                       <div className="font-semibold text-lg">{cert.title}</div>
                       <div className="text-sm text-muted-foreground">{cert.issuer} &middot; {cert.date}</div>
                       <div className="text-xs text-muted-foreground mb-1">{cert.description}</div>
-                      {cert.link && (
-                        <a
-                          href={cert.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 rounded bg-primary text-primary-foreground px-3 py-1 font-semibold shadow hover:bg-primary/90 transition-colors text-xs"
-                        >
-                          View Credential
-                          <ArrowUpRight className="size-3" />
-                        </a>
-                      )}
+                      {cert.link && <CertificationLink href={cert.link} />}
                     </div>
                   </li>
                 </BlurFade>

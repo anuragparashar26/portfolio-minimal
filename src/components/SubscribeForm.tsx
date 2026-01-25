@@ -43,7 +43,7 @@ export default function SubscribeForm() {
       <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
         Get the latest blogs and updates delivered right to your inbox. No spam, ever.
       </p>
-      <form onSubmit={handleSubmit} className="flex items-center gap-2">
+      <form onSubmit={handleSubmit} className="flex items-stretch gap-2">
         <div className="flex-1">
           <input
             type="email"
@@ -52,10 +52,10 @@ export default function SubscribeForm() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="email@example.com"
             required
-            className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full h-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
           />
         </div>
-        <button type="submit" disabled={isSubmitting} className="button-accent">
+        <button type="submit" disabled={isSubmitting} className="button-accent px-6">
           {isSubmitting ? "Subscribing..." : "Subscribe"}
         </button>
       </form>

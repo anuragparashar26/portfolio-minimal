@@ -1,7 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+'use client';
+
 import BlurFade from "@/components/magicui/blur-fade";
 import SubscribeForm from "@/components/SubscribeForm";
+import LinkIcon from "@/components/ui/link-icon";
+import { useRef } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -28,19 +30,23 @@ export function BlogSection({ posts, error }: { posts: BlogPost[]; error?: strin
 					{error && <div className="text-red-500">{error}</div>}
 					<ul className="mb-4 divide-y divide-dashed">
 						{!error && posts.length === 0 && <li>Loading...</li>}
-						{posts.map((post, idx) => (
+						{posts.map((post, idx) => {
+							const iconRef = useRef<any>(null);
+							return (
 							<li key={idx} className="py-2 text-lg font-medium">
 								<a
 									href={post.url}
 									target="_blank"
 									rel="noopener noreferrer"
 									className="flex items-center gap-2 group px-3 py-3 rounded-lg border border-border bg-background/70 shadow-sm hover:bg-muted transition"
+									onMouseEnter={() => iconRef.current?.startAnimation?.()}
+									onMouseLeave={() => iconRef.current?.stopAnimation?.()}
 								>
 									<span className="group-hover:text-primary flex-1 text-left">{post.title}</span>
-									<FontAwesomeIcon icon={faLink} className="w-4 h-4 opacity-70 group-hover:text-primary" />
+									<LinkIcon ref={iconRef} size={16} className="opacity-70 group-hover:text-primary" />
 								</a>
 							</li>
-						))}
+						);})}
 					</ul>
 					<SubscribeForm />
 				</div>
