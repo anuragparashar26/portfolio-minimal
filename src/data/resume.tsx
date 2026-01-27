@@ -2,15 +2,15 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, Languages, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Anurag Parashar",
+  name: "Anurag. Parashar",
   initials: "AP",
   url: "https://anuragparashar.tech/",
   location: "Bengaluru, India",
   locationLink: "https://www.google.com/maps/place/bengaluru",
   description:
-    "Full Stack AI Developer. Actively involved in Open Source, Cybersecurity, DevOps, and Design.",
+    "Crafting software that blends AI, design, and the web.",
   summary:
-    "I build software that blends AI, design, and the web.",
+    "I am actively involved in Open Source, Cybersec, DevOps, and Design.",
   avatarUrl: "/me.png",
   skills: {
     Frontend: ["ReactJs", "NextJs","Tailwind", "JavaScript", "Typescript"],
