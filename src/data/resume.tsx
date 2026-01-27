@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "Crafting software that blends AI, design, and the web.",
   summary:
-    "I am actively involved in Open Source, Cybersec, DevOps, and Design.",
+    "Actively involved in open source, I explore cybersecurity by hacking around, tinker with DevOps, and enjoy making good design. I am curious about data, patterns, physics, and philosophy, and how they shape the way we understand the world, systems, and the questions worth asking.",
   avatarUrl: "/me.png",
   skills: {
     Frontend: ["ReactJs", "NextJs","Tailwind", "JavaScript", "Typescript"],
